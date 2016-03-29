@@ -1,0 +1,23 @@
+{
+  "name": "codeproblems",
+  "version": "1.0.0",
+  "description": "Repo for practice coding problems in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alicekao/codeProblems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alicekao/codeProblems/issues"
+  },
+  "homepage": "https://github.com/alicekao/codeProblems#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
