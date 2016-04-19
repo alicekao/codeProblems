@@ -8,4 +8,8 @@ describe('All Anagrams', function() {
   it('should not return duplicate anagrams', function() {
     expect(allAnagrams('apps')).to.have.lengthOf(12);
   });
+  it('should handle edge cases', function() {
+    expect(allAnagrams('')).to.have.lengthOf(0);
+    expect(allAnagrams('')).to.be.instanceof(Array);
+  });
 });

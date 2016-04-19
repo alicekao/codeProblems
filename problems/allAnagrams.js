@@ -1,4 +1,7 @@
 module.exports = function(str) {
+  if (!str.length) {
+    return [];
+  }
   var results = {};
   var innerFn = function(current, remaining) {
     if (current.length === str.length) {
