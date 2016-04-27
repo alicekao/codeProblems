@@ -5,7 +5,7 @@ var a = {a: 1, b: 2};
 var b = {a: 2, b: 2};
 var c = {a: {c: 3, d: 1}, b: 2};
 var d = {a: {c: 3, e: 1}, b: 2};
-var e = {a: {c: {d: {f: {g: 1}}} 3, e: 1}, b: 2};
+var e = {a: {c: {d: {f: {g: 1}}}, e: 1}, b: 2};
 
 describe('DeepEquality', function() {
   it('should return true', function() {
