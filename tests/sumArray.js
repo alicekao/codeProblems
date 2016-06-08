@@ -11,6 +11,6 @@ describe('sumArray', function() {
     expect(sumArray([-1, 3, 5, -8, 0])).to.equal(8);
     expect(sumArray([1, 2, 3])).to.equal(6);
     expect(sumArray([4, -1, 5])).to.equal(8);
-    expect(sumArray([ 1, 2, 3, -6, 4, 5, 6 ])).to.equal(15);
+    expect(sumArray([ 1, 2, 3, -10, 4, 5, 6 ])).to.equal(15);
   })
 });
