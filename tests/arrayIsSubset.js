@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var isSubset = require('../problems/arrayIsSubset.js');
+const expect = require('chai').expect;
+const isSubset = require('../problems/arrayIsSubset.js');
 
 describe('Array is Subset of', function() {
   it('returns true for a subset', function() {

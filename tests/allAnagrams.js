@@ -1,4 +1,4 @@
-var expect = require('chai').expect;
+const expect = require('chai').expect;
 var allAnagrams = require('../problems/allAnagrams');
 
 describe('All Anagrams', function() {
