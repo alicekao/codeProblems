@@ -16,7 +16,7 @@ describe('primeTester', function() {
     expect(isPrime(3)).to.be.true;
     expect(isPrime(5)).to.be.true;
     expect(isPrime(11)).to.be.true;
-    expect(isPrime(18)).to.be.true;
+    expect(isPrime(18)).to.be.false;
   });
   it('should return false for nonprime numbers', function() {
     expect(isPrime(4)).to.be.false;
