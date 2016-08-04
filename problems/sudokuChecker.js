@@ -10,15 +10,8 @@ module.exports = function (boardStr) {
     if (!loopThroughOpts(row)) { return 'invalid'; }
     for (var j = 0; j < row.length; j++) {
       cols[j] = cols[j] ? cols[j] + row[j] : [row[j]];
-      if (i < 3 && j < 3) { boxes[0] = boxes[0] ? boxes[0] + row[j] : [row[j]] }
-      else if (i < 3 && j < 6) { boxes[1] = boxes[1] ? boxes[1] + row[j] : [row[j]] }
-      else if (i < 3 && j < 9) { boxes[2] = boxes[2] ? boxes[2] + row[j] : [row[j]] }
-      else if (i < 6 && j < 3) { boxes[3] = boxes[3] ? boxes[3] + row[j] : [row[j]] }
-      else if (i < 6 && j < 6) { boxes[4] = boxes[4] ? boxes[4] + row[j] : [row[j]] }
-      else if (i < 6 && j < 9) { boxes[5] = boxes[5] ? boxes[5] + row[j] : [row[j]] }
-      else if (i < 9 && j < 3) { boxes[6] = boxes[6] ? boxes[6] + row[j] : [row[j]] }
-      else if (i < 9 && j < 6) { boxes[7] = boxes[7] ? boxes[7] + row[j] : [row[j]] }
-      else if (i < 9 && j < 9) { boxes[8] = boxes[8] ? boxes[8] + row[j] : [row[j]] }
+      var boxI = 3*Math.floor(i/3) + Math.floor(j/3);
+      boxes[boxI] = boxes[boxI] ? boxes[boxI] + row[j] : [row[j]];
     }
   }
   for (var k = 0; k < cols.length; k++) {
