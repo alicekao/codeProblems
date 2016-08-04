@@ -11,10 +11,8 @@ module.exports = function (matrix) {
       result.push(matrix[iMin][x]);
     }
     iMin++;
-    if (iMin < iMax) {
-      for (var w = iMin; w <= iMax; w++) {
-        result.push(matrix[w][jMax]);
-      }
+    for (var w = iMin; w <= iMax; w++) {
+      result.push(matrix[w][jMax]);
     }
     if (iMin < iMax) {
       for (var y = --jMax; y >= jMin; y--) {
