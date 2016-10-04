@@ -6,7 +6,7 @@ var Hashtable = function (size) {
     return count;
   }
 
-  this.insert = function (k, v) {
+  var insert = function (k, v) {
     var i = getIndexBelowMaxForKey(k, max);
     var bucket = storage[i] || [];
     var found = false;
@@ -22,7 +22,11 @@ var Hashtable = function (size) {
       count++;
     }
     storage[i] = bucket;
+    if (count / max > 0.75) {
+      resize(max*2, storage);
+    }
   }
+  this.insert = insert;
 
   this.retrieve = function (k) {
     var i = getIndexBelowMaxForKey(k, max);
@@ -48,6 +52,18 @@ var Hashtable = function (size) {
     storage[i] = newBucket;
     found ? count-- : null;
     return found;
+  }
+
+  function resize(newLimit) {
+    var oldStorage = storage;
+    storage = new Array(newLimit);
+    count = 0;
+    max = newLimit
+    oldStorage.forEach(function(bucket) {
+      bucket.forEach(function(duple) {
+        insert(duple[0], duple[1]);
+      });
+    });
   }
 }
 

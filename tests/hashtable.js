@@ -14,13 +14,17 @@ describe('Hashtables', () => {
     const ex = new hashtable(8);
     expect(ex.size()).to.equal(0);
   })
-  it('Should retrieve values', () => {
+  it('Should insert and retrieve values', () => {
     const ex = new hashtable(8);
     ex.insert('alice', 'kao');
     ex.insert('apple', 'banana');
     ex.insert('bob', 'donut');
     ex.insert('danny', 'cat');
-    expect(ex.size()).to.equal(4);
+    ex.insert('truck', 'wheel');
+    ex.insert('chair', 'chicken');
+    expect(ex.size()).to.equal(6);
+    ex.insert('last', 'one');
+    expect(ex.size()).to.equal(7);
     expect(ex.retrieve('alice')).to.equal('kao');
     expect(ex.retrieve('danny')).to.equal('cat');
     expect(ex.retrieve('unknown')).to.null;
