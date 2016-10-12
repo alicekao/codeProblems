@@ -16,3 +16,15 @@ module.exports = function(str) {
   innerFn('', str);
   return Object.keys(results);
 };
+
+/*
+Input: string
+Output: array of strings
+
+Edge cases: 
+  - empty string => []
+  - no duplicates? no
+  - Capital different than lower case? no
+
+Time complexity: O(n^n)
+*/

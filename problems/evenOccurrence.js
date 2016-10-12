@@ -8,3 +8,12 @@ module.exports = function(arr) {
   }
   return null;
 }
+
+/* 
+Inputs: array of primitives
+Output: primitive or null
+Edge cases:
+ - empty str => null
+ - capital different than lower case? yes
+ - none found => null
+ */

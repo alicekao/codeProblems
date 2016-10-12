@@ -14,3 +14,15 @@ module.exports = function (alphabet, text) {
   })
   return result.join(',') || 'no matches';
 }
+
+/*
+Input: alphabet (string), text (string)
+Output: string
+
+Edge cases:
+  - no result => 'no matches'
+  - empty alphabet || empty text => 'no matches'
+  - case sensitive? no
+  - numbers in alphabet? count digits only
+  - spaces count as letters? no
+*/
