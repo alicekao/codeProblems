@@ -20,7 +20,6 @@ describe('LRU', () => {
     expect(newLRU.get('butter')).to.equal(5);
     newLRU.set('jelly', 6);
     expect(newLRU.get('jelly')).to.equal(6);
-    console.log(newLRU.storage);
     expect(newLRU.get('apple')).to.equal(-1);
   });
   it('Should handle collisions', () => {
