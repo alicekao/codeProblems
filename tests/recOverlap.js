@@ -9,6 +9,7 @@ describe('Rectangle Overlap', () => {
     expect(recOverlap([[-5,0], [-5,10], [10,10], [10,0], ...rec])).to.equal(50);
   });
   it('Should handle edge cases', () => {
+    expect(recOverlap([[5,0], [5,10], [10,10], [10,0], ...rec])).to.equal(0);
     expect(recOverlap([[6,0],[6,1],[7,0],[7,1],...rec])).to.equal(0);
     expect(recOverlap([[-4,1],[-4,1],[-4,1],[-4,1],...rec])).to.equal(0);
     expect(recOverlap([[-4,1],[-4,4],[4,1],[4,4],...rec])).to.equal(24);
